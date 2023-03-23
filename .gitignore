@@ -130,3 +130,6 @@ dmypy.json
 
 # Pycharm
 .idea/
+
+# generated gRPC py files
+src/x64rdbgpy/proto

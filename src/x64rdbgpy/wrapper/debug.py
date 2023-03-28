@@ -61,3 +61,12 @@ class Debug:
 
     def delete_hardware_breakpoint(self, address):
         return self.stub.DeleteHardwareBreakpoint(Address(address=address)).boolean
+
+    def librarian_set_breakpoint(self, mod_name, mode="l", single_shot=True):
+        cmd = f"bpdll {mod_name}, {mode}"
+        if single_shot:
+            cmd += ", 1"
+        return self.bridge_main.dbg_exec_cmd_direct(cmd)
+
+    def libraian_remove_breakpoint(self, mod_name):
+        return self.bridge_main.dbg_exec_cmd_direct(f"bcdll {mod_name}")

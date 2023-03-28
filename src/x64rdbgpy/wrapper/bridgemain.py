@@ -1,7 +1,7 @@
 from x64rdbgpy.proto import bridgemain_pb2_grpc
 from x64rdbgpy.proto.base_pb2 import String, Empty
 from x64rdbgpy.proto.bridgemain_pb2 import RegDump
-from x64rdbgpy.breakpoint import BPs
+from x64rdbgpy.wrapper.breakpoint import BPs
 import grpc
 
 

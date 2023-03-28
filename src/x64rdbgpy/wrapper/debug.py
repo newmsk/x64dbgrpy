@@ -1,7 +1,7 @@
 from x64rdbgpy.proto import debug_pb2_grpc
 from x64rdbgpy.proto.base_pb2 import Empty, Address
 from x64rdbgpy.proto.debug_pb2 import HardwareBreakpoint
-from x64rdbgpy.bridgemain import BridgeMain
+from x64rdbgpy.wrapper.bridgemain import BridgeMain
 import grpc
 
 

@@ -116,7 +116,7 @@ class BridgeMain:
 
     def dbg_eval(self, expr):
         expr_value = self.stub.DbgEval(String(value=expr))
-        return expr_value.value if expr_value.success else None
+        return expr_value.value.value if expr_value.success.boolean else None
 
     def var_value(self, var_name):
         if not var_name.startswith("$"):
